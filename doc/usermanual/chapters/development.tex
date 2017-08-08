@@ -13,10 +13,10 @@ After this, it is up to the developer to implement all the required functionalit
 \item The framework documentation in Section \ref{sec:framework} for an introduction to the different parts of the framework.
 \item The module documentation in Section \ref{sec:modules} for a description of functionality other modules already provide and to look for similar modules which can help during development.
 \item The Doxygen (core) reference documentation included in the framework \todo{available at location X}.
-\item The latest version of the source code of all the modules (and the core itself). Freely available to copy and modify under the MIT license at \url{https://gitlab.cern.ch/simonspa/allpix-squared/tree/master}.
+\item The latest version of the source code of all the modules (and the core itself). Freely available to copy and modify under the MIT license at \url{https://github.com/allpix-squared/allpix-squared/tree/master}.
 \end{itemize}
 
-Any module that may be useful for other people can be contributed back to the main repository. It is very much encouraged to send a merge-request at \url{https://gitlab.cern.ch/simonspa/allpix-squared/merge_requests}.
+Any module that may be useful for other people can be contributed back to the main repository. It is very much encouraged to send a merge-request at \url{https://github.com/allpix-squared/allpix-squared/pulls}.
 
 \subsection{Adding a New Detector Model}
 \label{sec:adding_detector_model}
@@ -25,7 +25,7 @@ Custom detector models can be easily added to the framework. Required informatio
 \item Create a new file with the internal name of the model followed by the \textit{.conf} suffix (for example \texttt{your\_model.conf}).
 \item Add a configuration parameter \texttt{type} with the type of the model, at the moment either 'monolithic' or 'hybrid' for respectively monolithic sensors or hybrid models with bump bonds.
 \item Add all the required parameters and possibly other optional parameters explained in Section \ref{sec:detector_models}.
-\item Include the detector model in the search path of the framework by adding the \texttt{model\_path} parameter to the general setting of the main configuration (see Section \ref{sec:framework_parameters}) pointing to either directly to the detector model file or the detector containing it (note that files in this path overwrite models with the same name in the default model folder). 
+\item Include the detector model in the search path of the framework by adding the \texttt{model\_path} parameter to the general setting of the main configuration (see Section \ref{sec:framework_parameters}) pointing to either directly to the detector model file or the detector containing it (note that files in this path overwrite models with the same name in the default model folder).
 \end{enumerate}
 
-Models can be contributed to the repository to make them available to other users of the framework. To add the detector model to the framework the configuration file should be moved to the \textit{models} folder of the repository. Then the file should be added to the installation target in the \textit{CMakeLists.txt} file in the \textit{models} directory. Afterwards a merge-request can be created at \url{https://gitlab.cern.ch/simonspa/allpix-squared/merge_requests}.
+Models can be contributed to the repository to make them available to other users of the framework. To add the detector model to the framework the configuration file should be moved to the \textit{models} folder of the repository. Then the file should be added to the installation target in the \textit{CMakeLists.txt} file in the \textit{models} directory. Afterwards a pull request can be created at \url{https://github.com/allpix-squared/allpix-squared/pulls}.
